@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: 博客笔记 →
-heroText: 我的主页
+heroText: 脚本修改测试
 actionLink: /guide/
 features:
 - title: 简洁至上
