@@ -1,3 +1,3 @@
 module.exports = {
-    base: '.', // 设置站点根路径
+    base: '/blog/', // 设置站点根路径
 };
