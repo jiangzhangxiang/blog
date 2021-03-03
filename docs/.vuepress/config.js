@@ -1,7 +1,7 @@
 module.exports = {
     base: '/blog/', // 设置站点根路径
     title: "蒋张祥的博客",
-    description: "My tech blog",
+    // description: "项目表述",
     markdown: {
         lineNumbers: true,
     },
