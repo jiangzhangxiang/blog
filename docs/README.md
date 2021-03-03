@@ -1,8 +1,8 @@
 ---
 home: true
 actionText: 博客笔记 →
-heroText: 蒋张祥的个人技术博客
-actionLink: /guide/
+heroText: 蒋张祥的博客
+actionLink: /guide/notes/html/语义化
 features:
 - title: 简洁至上
   details: 使用最简单清晰的话语编写博客。
@@ -10,5 +10,6 @@ features:
   details: 知识点衔接紧密,注释明白,逻辑清楚。
 - title: 兴趣驱动
   details: 丰富的代码案例,页面效果驱动学习。
-  footer: 云牧的个人博客
+footer: 蒋张祥的博客
 ---
+
