@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: 博客笔记 →
-heroText: 脚本修改测试
+heroText: 蒋张祥的个人技术博客
 actionLink: /guide/
 features:
 - title: 简洁至上
