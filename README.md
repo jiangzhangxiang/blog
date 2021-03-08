@@ -15,7 +15,8 @@ $ yarn install
 # develop
 $ yarn dev
 ```
-This will automatically open http://localhost:8000
+
+This will automatically open http://localhost:8080
 
 ## Build
 
