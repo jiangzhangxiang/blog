@@ -2,6 +2,12 @@
 
 module.exports = [
   {
+    title: "指南",
+    children: [
+      { title: "介绍", path: "/guide/" }
+    ],
+  },
+  {
     title: "HTML5",
     collapsable: true,
     children: [
