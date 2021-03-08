@@ -20,5 +20,13 @@ module.exports = [
     children: [
       { title: "Flex布局", path: "/guide/notes/css/Flex布局" }
     ],
+  },
+  {
+    title: "JavaScript",
+    collapsable: true,
+    children: [
+      { title: "JS-数据类型", path: "/guide/notes/js/数据类型" },
+      { title: "JS-深拷贝和浅拷贝", path: "/guide/notes/js/深拷贝和浅拷贝" },
+    ],
   }
 ];
