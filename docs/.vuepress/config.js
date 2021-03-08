@@ -6,20 +6,18 @@ module.exports = {
         lineNumbers: true,
     },
     themeConfig: {
+        editLinks: true,
+        editLinkText: "在 GitHub 上编辑此页 ！",
+        repo: 'jiangzhangxiang/blog',
         nav: require("./nav.js"),
         sidebar: require("./sidebar.js"),
-        collapsable:true,
-        // sidebarDepth: 2,
-        lastUpdated: "Last Updated",
-        searchMaxSuggestoins: 10,
+        lastUpdated: "上次更新",
         serviceWorker: {
             updatePopup: {
                 message: "有新的内容.",
                 buttonText: "更新",
             },
-        },
-        editLinks: true,
-        editLinkText: "在 GitHub 上编辑此页 ！",
+        }
     },
 
 };
