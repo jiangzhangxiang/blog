@@ -9,6 +9,7 @@ module.exports = {
         editLinks: true,
         editLinkText: "在 GitHub 上编辑此页 ！",
         repo: 'jiangzhangxiang/blog',
+        docsDir: 'docs',
         nav: require("./nav.js"),
         sidebar: require("./sidebar.js"),
         lastUpdated: "上次更新",
