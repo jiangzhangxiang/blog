@@ -1,6 +1,6 @@
 
 ## Documentation
-Check out our docs at [https://github.com/jiangzhangxiang/blog](https://github.com/jiangzhangxiang/blog)
+Check out our docs at [https://jiangzhangxiang.github.io/blog/](https://jiangzhangxiang.github.io/blog/)
 
 ## Contribution
 
