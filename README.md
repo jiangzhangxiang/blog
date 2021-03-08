@@ -1,13 +1,26 @@
 
-## Documentation
-Check out our docs at [https://jiangzhangxiang.github.io/blog/](https://jiangzhangxiang.github.io/blog/)
+## Introduction
 
-## Contribution
+* [Preview](https://jiangzhangxiang.github.io/blog/)
+
+## Getting started
 
 ```bash
+# clone the project
 $ git clone https://github.com/jiangzhangxiang/blog.git
+# enter the project directory
 $ cd blog
+# install dependency
 $ yarn install
-$ yarn dev # visit http://localhost:8000
-$ yarn build
+# develop
+$ yarn dev
 ```
+This will automatically open http://localhost:8000
+
+## Build
+
+```bash
+# build for test environment
+$ yarn run build
+```
+
