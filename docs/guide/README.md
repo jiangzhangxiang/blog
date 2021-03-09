@@ -1,180 +1,109 @@
-# Hello! 我是蒋张祥
 
-致力于将编程和艺术相结合，以直观、生动、有趣的方式呈现枯燥的编程概念和原理，助你以最快的速度、愉快的心情掌握编程技巧，进而提升工作竞争力和创新创业能力。
+## 网络请求
 
-## IDE
+#### 1. 构建请求
+浏览器会构建请求行:
 
-> IDE (Integrated Development Environment，**集成开发环境**）是含代码编辑、关键词高亮、智能感应、智能纠错、格式美化、版本管理等功能于一身的“**高级代码编辑器**”
+```
+// 请求方法是GET，路径为根路径，HTTP协议版本为1.1
+GET / HTTP/1.1
+```
 
-**每个IT工程师都要有自己趁手的IDE，它是我们的武器**
+#### 2. 查找强缓存
+先检查强缓存，如果命中直接使用，否则进入下一步。
 
-但是要知道无论使用什么IDE编写出来的代码，本质上都是底黑字”的，都是“纯文字”的
+#### 3. DNS解析
 
-前端最常用的 IDE 有 [Webstorm](https://link.juejin.im/?target=https%3A%2F%2Fwww.jetbrains.com%2Fwebstorm%2F)、[Sublime](https://link.juejin.im/?target=https%3A%2F%2Fwww.sublimetext.com%2F)、[Atom](https://link.juejin.im/?target=https%3A%2F%2Fatom.io%2F) 和 [VSCode](https://link.juejin.im/?target=https%3A%2F%2Fcode.visualstudio.com%2F)和 [HBuider](https://www.dcloud.io/hbuilderx.html)  我们可以分别去它们的官网看一下。
+由于我们输入的是域名，而数据包是通过`IP地址`传给对方的。因此我们需要得到域名对应的`IP地址`。
+这个过程需要依赖一个服务系统，这个系统将域名和 IP 一一映射，我们将这个系统就叫做**DNS**（域名系统）。得到具体 IP 的过程就是`DNS`解析。
 
-![image-20201229205522651](https://i.loli.net/2020/12/29/V4svfA7xYr2cytP.png)
+当然，值得注意的是，浏览器提供了**DNS数据缓存功能**。
+即如果一个域名已经解析过，那会把解析的结果缓存下来，下次处理直接走缓存，不需要经过 `DNS`解析。
 
-**Webstorm 是最强大的收费编辑器**，因为它拥有各种强大的插件和功能.
+另外，如果不指定端口的话，默认采用对应的 IP 的 80 端口。
 
-Sublime 同样非常好用，第一它免费，第二它轻量、高效，第三它插件非常多。
+#### 4. 建立 TCP 连接
 
-Atom 是 GitHub 出品的编辑器,免费并且插件丰富，而且跟 Sublime 相比风格上还有些小清新。
+这里要提醒一点，Chrome 在同一个域名下要求同时最多只能有 6 个 TCP 连接，超过 6 个的话剩下的请求就得等待。
 
-**VSCode 是我日常使用编辑器** 微软出品的轻量级（相对于 Visual Studio 来说）编辑器
+假设现在不需要等待，我们进入了 TCP 连接的建立阶段。首先解释一下什么是 TCP:
 
-- 如果你要走大牛、大咖、逼格的路线，就用 Webstorm
-- 如果你走普通、屌丝、低调路线，就用 Sublime
-- 如果你走小清新、个性路线，就用 VSCode 或者 Atom
-- 如果你面试，最好有一个用的熟悉，其他都会一点
+>TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议。
 
-:::warning
+建立 `TCP连接`经历了下面三个阶段:
 
-**最后注意**：千万不要说你使用 Dreamweaver 或者 notepad++ 写前端代码，会被人鄙视的。
+1. 通过三次握手(即总共发送3个数据包确认已经建立连接)建立客户端和服务器之间的连接。
+2. 进行数据传输。这里有一个重要的机制，就是接收方接收到数据包后必须要向发送方`确认`, 如果发送方没有接到这个`确认`的消息，就判定为数据包丢失，并重新发送该数据包。当然，发送的过程中还有一个优化策略，就是把`大的数据包拆成一个个小包`，依次传输到接收方，接收方按照这个小包的顺序把它们`组装`成完整数据包。
+3. 断开连接的阶段。数据传输完成，现在要断开连接了，通过**四次挥手**来断开连接。
 
-如果你不做 .NET 也不要用 Visual Studio ，不做 Java 也不要用 Eclipse。
+读到这里，你应该明白 TCP 连接通过什么手段来保证数据传输的可靠性，一是三次握手确认连接，二是数据包校验保证数据到达接收方，三是通过四次挥手断开连接。
 
-Dreamweaver是曾经网页制作的王牌IDE，推崇“**所见即所得**”，用拖拽控件的方式进行网页开发。
+#### 5.发送 HTTP 请求
 
-但是近几年，**前端开发技术、形式已经发生了根本性的变化**, Dreamweaver现在不是前端开发工程师的主流选择了。
+现在`TCP连接`建立完毕，浏览器可以和服务器开始通信，即开始发送 HTTP 请求。浏览器发 HTTP 请求要携带三样东西:**请求行**、**请求头**和**请求体**。
 
-:::
+首先，浏览器会向服务器发送**请求行**,关于**请求行**， 我们在这一部分的第一步就构建完了，贴一下内容:
 
-## Visual Studio Code简介
+```
+// 请求方法是GET，路径为根路径，HTTP协议版本为1.1
+GET / HTTP/1.1
+```
 
+结构很简单，由**请求方法**、**请求URI**和**HTTP版本协议**组成。
 
+同时也要带上**请求头**，比如我们之前说的**Cache-Control、If-Modified-Since、If-None-Match**都由可能被放入请求头中作为缓存的标识信息。当然了还有一些其他的属性，列举如下:
 
-> Visual Studio Code简称VS Code，来自微软公司
+```
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Cookie: /* 省略cookie信息 */
+Host: www.baidu.com
+Pragma: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+```
+最后是请求体，请求体只有在`POST`方法下存在，常见的场景是**表单提交**。
 
-![image-20201229212321868](https://i.loli.net/2020/12/29/VTeFb5C2WL8MuQd.png)
 
+## 网络响应
 
+HTTP 请求到达服务器，服务器进行对应的处理。最后要把数据传给浏览器，也就是返回网络响应。
 
-**优点:内置功能非常丰富、插件全且安装简单、轻量、有MAC版本**
+跟请求部分类似，网络响应具有三个部分:**响应行**、**响应头**和**响应体**。
 
+响应行类似下面这样:
 
+```
+HTTP/1.1 200 OK
+```
 
-### VSCode颜色主题
+由`HTTP协议版本`、`状态码`和`状态描述`组成。
 
-- vs code提供了不同风格的颜色主题
-- 在文件→首选项→颜色主题中，将主题改为Light+ (default light)
+响应头包含了服务器及其返回数据的一些信息, 服务器生成数据的时间、返回的数据类型以及对即将写入的Cookie信息。
 
+举例如下:
 
+```
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: text/html;charset=utf-8
+Date: Wed, 04 Dec 2019 12:29:13 GMT
+Server: apache
+Set-Cookie: rsv_i=f9a0SIItKqzv7kqgAAgphbGyRts3RwTg%2FLyU3Y5Eh5LwyfOOrAsvdezbay0QqkDqFZ0DfQXby4wXKT8Au8O7ZT9UuMsBq2k; path=/; domain=.baidu.com
+```
 
-### ctrl +鼠标滚轮缩放字号
+响应完成之后怎么办？TCP 连接就断开了吗？
 
-- 如果能用**ctrl＋鼠标滚轮缩放字号**，会非常方便
-- 我们需要进行相关的配置，打开配置中心，搜索“滚动”即可
+不一定。这时候要判断`Connection`字段, 如果请求头或响应头中包含**Connection: Keep-Alive**，表示建立了持久连接，这样`TCP`连接会一直保持，之后请求统一站点的资源会复用这个连接。
 
-![image-20201229212710815](https://i.loli.net/2020/12/29/PqO53JoLysVt8um.png)
+否则断开`TCP`连接, 请求-响应流程结束
 
+## 总结
 
+到此，我们来总结一下主要内容，也就是浏览器端的网络请求过程：
 
-### vscode常用插件
-
-**chinese** 汉化插件
-
-**open in browser** 右键打开浏览器
-
-**Live Server** 开启自动刷新功能
-
-**Prettier** 代码格式化 让代码的展示更加美观
-
-**vscode-icons** 根据文件的后缀名来显示不同的图标
-
-**Bracket Pair Colorizer 2** 以不同颜色显示成对的括号，并用连线标注括号范围。简称**彩虹括号**。
-
-**CSS Peak** 在HTML通过对应标签的名字快速跳转到对应的CSS
-
-**Image preview** 图片预览
-
-
-
-### 快捷键
-
-![image-20201229212742850](https://i.loli.net/2020/12/29/pSZRQHgixhzTNVE.png)
-
-**ctrl+c** 复制
-
-**ctrl+V** 粘贴
-
-**ctrl+s** 保存
-
-**ctrl+x**剪切 也可以用于删除整行
-
-**ctrl+z** 返回上一步
-
-**ctrl+y** 撤销返回上一步
-
-**ctrl + f** 查询/替换内容
-
-
-
-**Sublime快捷键扩展**
-
-- Sublime是另外一个非常著名的编辑器，Sublime中的快捷键非常的经典，**而VS Code可以集成Sublime的快捷键**
-- 需要安装插件，在插件中心搜索Sublime，安装插件即可
-
-![image-20201229212909821](https://i.loli.net/2020/12/29/tDM72wrqhW6oklO.png)
-
-
-
-![image-20201229212930396](https://i.loli.net/2020/12/29/cpWkAjHwRidFybJ.png)
-
-#### 跳转操作
-
-**Cmd +Pagedown/Pageup** 在已经打开的多个文件之间进行 非常实用
-
-**Ctrl + Tab** 在已经打开的多个文件之间进行
-
-
-
-
-
-#### 移动光标
-
-**方向键** 在单个字符之间移动光标 地球人都知道
-
-**Alt＋鼠标点击任意位** 在任意位置，同时出现光标
-
-**Ctrl + D** 将全文中相同的词逐一加入选择
-
-
-
-#### 工作区快捷键
-
-**Cmd +B** 显示/隐藏侧边栏 很实用
-
-**Ctrl + \\** 创建多个编辑器
-
-**Cmd + Shift+N** 重新开一个软件的窗口
-
-**Ctrl + W** 关闭当前文件
-
-
-
-#### 其他快捷键
-
-**shift + alt + f** 代码格式化快捷键
-
-**shift + alt + ↓** 向下复制一份 ： 选中要复制的内容 
-
-
-
-#### 鼠标操作
-
-在当前行的位置，鼠标三击，可以选中当前行。
-
-用鼠标单击文件的**行号**，可以选中当前行。
-
-
-
-
-
-## markdown文件
-
-
-
-下载并安装 Typora 进行编写查看 .md 文件
-
-
-
+!['总结'](./2.jpg)

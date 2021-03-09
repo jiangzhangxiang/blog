@@ -2,9 +2,9 @@
 
 module.exports = [
   {
-    title: "指南",
+    title: "笔记",
     children: [
-      { title: "介绍", path: "/guide/" }
+      { title: "从输入URL到页面呈现发生了什么", path: "/guide/" }
     ],
   },
   {
