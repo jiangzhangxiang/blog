@@ -15,7 +15,7 @@ var obj = new Object();
 var obj = Object.create(null);
 
 // Map
-var map = new Map([1, 2], [2, 3]); // map = {1 => 2, 2 => 3}
+var map = new Map([[1, 2], [2, 3]]); // map = {1 => 2, 2 => 3}
 ```
 ## Set 对象
 ### 是一组唯一值的集合
@@ -34,7 +34,7 @@ var arr = new Array();
 var arr = new Set([1,2,3]);
 
 // Set
-var set = new Set([1,2,3]);
+var set = new Set([1,2,3]) //set = { 1, 2, 3 }
 ```
 ### 例子
 Set 数组去重: 
