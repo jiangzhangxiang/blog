@@ -1,13 +1,13 @@
-## Map 对象
+## Map 对象 —— 是一个带键的数据项的集合
 
 * Map 继承自 Object 对象。
 * set以RBTree作为底层容器
-* 不允许键重复
-* Map中的键值是有序的（FIFO 原则），而添加到对象中的键则不是。
+* 不允许key重复
 * Map的键是不能修改的，但是其键对应的值是可以修改的
 
 #### 和Object的区别
 * 一个Object 的键只能是字符串或者 Symbols，但一个Map 的键可以是任意值。
+* Map中的键值是有序的（FIFO 原则），而添加到Object中的键则不是。
 
 新建实例:
 ```javascript
@@ -20,16 +20,16 @@ var obj = Object.create(null);
 var map = new Map([1, 2], [2, 3]); // map = {1 => 2, 2 => 3}
 ```
 
-## Set 对象
+## Set 对象 —— 是一组唯一值的集合。
 
 * Set 继承自 Object 对象
 * set以RBTree作为底层容器
+* 不允许key重复
 * 所有得元素的只有key没有value，value就是key
 * 不能通过迭代器来改变set的值，因为set的值就是键
 
 #### 和Array的区别
-* Array元素可重复，有序
-* Set所有的元素都会被自动排序，不允许出现重复的值
+* Array元素可重复，Set不允许重复
 
 新建实例:
 ```javascript
