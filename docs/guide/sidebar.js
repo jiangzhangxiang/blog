@@ -25,8 +25,10 @@ module.exports = [
     title: "JavaScript",
     collapsable: true,
     children: [
-      { title: "JS-数据类型", path: "/guide/notes/js/dataType" },
-      { title: "JS-深拷贝和浅拷贝", path: "/guide/notes/js/deepCopyShallowCopy" },
+      { title: "数据类型", path: "/guide/notes/js/dataType" },
+      { title: "深拷贝和浅拷贝", path: "/guide/notes/js/deepCopyShallowCopy" },
+      { title: "Map和Set", path: "/guide/notes/js/mapset" },
     ],
   }
 ];
+
