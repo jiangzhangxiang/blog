@@ -39,8 +39,8 @@ var set = new Set([1,2,3]) //set = { 1, 2, 3 }
 ### 例子
 Set 数组去重: 
 ```javascript
-let arr = [5, 5, 3, 4, 5, 5, 2];
-let item = new Set(arr);
-let res = [...item]
+var arr = [5, 5, 3, 4, 5, 5, 2];
+var item = new Set(arr);
+var res = [...item]
 console.log(res); // [ 5, 3, 4, 2 ]
 ```
