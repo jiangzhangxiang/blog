@@ -8,23 +8,21 @@
 
 * 2. 在函数中，this 表示全局对象。
 ```javascript
-let obj = {
-  a: function() {
-    console.log(this);
-  }
+function func() {
+  console.log(this)
 }
-let func = obj.a;
-func(); // this = 全局对象
+
+func() // this = 全局对象
 ```
 
 * 3. 在方法中，this 表示该方法所属的对象。
 ```javascript
 let obj = {
   a: function() {
-    console.log(this);
+    console.log(this)
   }
 }
-obj.a(); // this = obj
+obj.a() // this = obj
 ```
 
 * 4. new+构造函数
@@ -55,11 +53,11 @@ IE比较奇异，使用attachEvent，里面的this默认指向window。
 let obj = {
   a: function() {
     let do = () => {
-      console.log(this);
+      console.log(this)
     }
-    do();
+    do()
   }
 }
-obj.a(); // 找到最近的非箭头函数a，a现在绑定着obj, 因此箭头函数中的this是obj
+obj.a() // 找到最近的非箭头函数a，a现在绑定着obj, 因此箭头函数中的this是obj
 ```
 优先级: new > call、apply、bind > 对象.方法 > 直接调用。
