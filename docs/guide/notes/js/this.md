@@ -5,7 +5,7 @@
 
 ## this的指向
 * 1. 全局上下文
-  默认this指向window, 严格模式下指向undefined。
+  默认this指向全局对象, 严格模式下指向undefined。
 
 * 2. 在函数中，this 表示全局对象。
 ```javascript
