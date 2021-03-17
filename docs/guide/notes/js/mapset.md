@@ -7,6 +7,8 @@
 #### 和Object的区别
 * 一个Object 的键只能是字符串或者 Symbols，但一个Map 的键可以是任意值。
 * Map中的键值是有序的（FIFO 原则），而添加到Object中的键则不是。
+#### 和WeakMap之间的区别？
+WeakMap只能以复杂数据类型作为key，并且key值是弱引用，对于垃圾回收更加友好。
 新建实例:
 ```javascript
 // Object
@@ -44,3 +46,4 @@ var item = new Set(arr);
 var res = [...item]
 console.log(res); // [ 5, 3, 4, 2 ]
 ```
+
