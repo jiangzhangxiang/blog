@@ -1,8 +1,9 @@
-## What's this?
+## 什么是 this?
 #### 面向对象语言中 this 表示当前对象的一个引用。
 
 #### 但在 JavaScript 中 this 不是固定不变的，它会随着执行环境的改变而改变。
 
+## this的指向
 * 1. 全局上下文
   默认this指向window, 严格模式下指向undefined。
 
@@ -63,3 +64,6 @@ let obj = {
 obj.a() // 找到最近的非箭头函数a，a现在绑定着obj, 因此箭头函数中的this是obj
 ```
 优先级: new > call、apply、bind > 对象.方法 > 直接调用。 
+
+## 改变this指向的三种方法
+call、apply、bind三者为改变this指向的方法。
