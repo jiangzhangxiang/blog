@@ -62,4 +62,4 @@ let obj = {
 }
 obj.a() // 找到最近的非箭头函数a，a现在绑定着obj, 因此箭头函数中的this是obj
 ```
-优先级: new > call、apply、bind > 对象.方法 > 直接调用。
+优先级: new > call、apply、bind > 对象.方法 > 直接调用。 
