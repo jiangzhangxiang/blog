@@ -16,7 +16,7 @@ function func() {
 func() // this = 全局对象
 ```
 
-* 3. 在方法中，this 表示该方法所属的对象。
+* 3. 在方对象.方法中，this 表示该方法所属的对象。
 ```javascript
 let obj = {
   a: function() {
@@ -26,7 +26,7 @@ let obj = {
 obj.a() // this = obj
 ```
 
-* 4. new 构造函数 中的this指向了创建出的对象
+* 4. new 构造函数 中的this指向实例对象
 
 new关键字会在内存中开辟一块空间，这个空间在设置好值后会把地址交给 b 这个变量，
 所以 b 就是创建出来的对象的“代言人”，而空间存在的“this”，也就指向了 b 
@@ -45,7 +45,7 @@ b.a() // Obj 里的 this 指向实例对象 b
 IE比较奇异，使用attachEvent，里面的this默认指向window。
 ```html
 <button onclick="this.style.display='none'">
-点我后我就消失了 // this = button
+  点我后我就消失了 // this = button
 </button>
 ```
 
@@ -55,10 +55,10 @@ IE比较奇异，使用attachEvent，里面的this默认指向window。
 ```javascript
 let obj = {
   a: function() {
-    let do = () => {
+    let d = () => {
       console.log(this)
     }
-    do()
+    d()
   }
 }
 obj.a() // 找到最近的非箭头函数a，a现在绑定着obj, 因此箭头函数中的this是obj

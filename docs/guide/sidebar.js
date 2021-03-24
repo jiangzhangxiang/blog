@@ -29,6 +29,7 @@ module.exports = [
       { title: "深拷贝和浅拷贝", path: "/guide/notes/js/deepCopyShallowCopy" },
       { title: "Map和Set", path: "/guide/notes/js/mapset" },
       { title: "this的理解", path: "/guide/notes/js/this" },
+      { title: "原型和原型链", path: "/guide/notes/js/prototype" },
     ],
   }
 ];

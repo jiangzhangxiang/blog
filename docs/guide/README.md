@@ -106,4 +106,4 @@ Set-Cookie: rsv_i=f9a0SIItKqzv7kqgAAgphbGyRts3RwTg%2FLyU3Y5Eh5LwyfOOrAsvdezbay0Q
 
 到此，我们来总结一下主要内容，也就是浏览器端的网络请求过程：
 
-!['总结'](./2.jpg)
+!['总结'](imge/2.jpg)
