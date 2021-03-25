@@ -3,7 +3,7 @@
 function Person (name, age, sex) {
     this.name = name;
     this.age = age;
-    this.sex = sex
+    this.sex = sex;
  
     this.sayName = function () {
         return this.name;
