@@ -1,9 +1,9 @@
 // const { title } = require("../.vuepress/config");
 module.exports = [
   {
-    title: "笔记",
+    title: "介绍",
     children: [
-      { title: "浏览器", path: "/guide/" }
+      { title: "介绍", path: "/guide/" }
     ],
   },
   {
@@ -31,6 +31,16 @@ module.exports = [
       { title: "原型和原型链", path: "/guide/notes/js/prototype" },
       { title: "js中的new做了什么", path: "/guide/notes/js/new" },
     ],
-  }
+  },
+  {
+    title: "浏览器",
+    collapsable: true,
+    children: [
+      { title: "从输入URL到页面呈现发生了什么", path: "/guide/notes/browser/render01" },
+      { title: "浏览器缓存", path: "/guide/notes/browser/render02" },
+      { title: "Http和Https区别", path: "/guide/notes/browser/render03" },
+      { title: "GET和POST区别", path: "/guide/notes/browser/render04" }
+    ],
+  },
 ];
 
