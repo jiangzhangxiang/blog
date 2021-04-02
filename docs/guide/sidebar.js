@@ -30,6 +30,7 @@ module.exports = [
       { title: "this的理解", path: "/guide/notes/js/this" },
       { title: "原型和原型链", path: "/guide/notes/js/prototype" },
       { title: "js中的new做了什么", path: "/guide/notes/js/new" },
+      { title: "闭包的理解", path: "/guide/notes/js/closure" }
     ],
   },
   {
