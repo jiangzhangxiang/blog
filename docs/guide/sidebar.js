@@ -25,12 +25,12 @@ module.exports = [
     collapsable: true,
     children: [
       { title: "数据类型", path: "/guide/notes/js/dataType" },
-      { title: "深拷贝和浅拷贝", path: "/guide/notes/js/deepCopyShallowCopy" },
       { title: "Map和Set", path: "/guide/notes/js/mapset" },
-      { title: "this的理解", path: "/guide/notes/js/this" },
+      { title: "深拷贝和浅拷贝", path: "/guide/notes/js/deepCopyShallowCopy" },
       { title: "原型和原型链", path: "/guide/notes/js/prototype" },
+      { title: "this的理解", path: "/guide/notes/js/this" },
+      { title: "闭包的理解", path: "/guide/notes/js/closure" },
       { title: "js中的new做了什么", path: "/guide/notes/js/new" },
-      { title: "闭包的理解", path: "/guide/notes/js/closure" }
     ],
   },
   {
