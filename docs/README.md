@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: 博客笔记 →
-heroText: 蒋张祥的博客
+heroText: 蒋张祥的博客2.0
 actionLink: /guide/
 features:
 - title: 简洁至上
