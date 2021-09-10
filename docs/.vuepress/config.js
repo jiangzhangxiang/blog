@@ -2,7 +2,6 @@ const map = {
     'build:aliyun': '/',
     'build:github': '/blog/'
 }
-console.log(map[process.env.npm_lifecycle_event]);
 module.exports = {
     base: map[process.env.npm_lifecycle_event] || '/',  // 设置站点根路径
     title: "蒋张祥的博客",

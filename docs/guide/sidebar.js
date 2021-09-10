@@ -30,6 +30,7 @@ module.exports = [
       { title: "深拷贝和浅拷贝", path: "/guide/notes/js/deepCopyShallowCopy" },
       { title: "原型和原型链", path: "/guide/notes/js/prototype" },
       { title: "this的理解", path: "/guide/notes/js/this" },
+      { title: "call apply bind", path: "/guide/notes/js/call_apply_bind" },
       { title: "闭包的理解", path: "/guide/notes/js/closure" },
       { title: "js中的new做了什么", path: "/guide/notes/js/new" },
     ],
