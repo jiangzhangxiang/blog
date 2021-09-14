@@ -45,5 +45,12 @@ module.exports = [
       { title: "GET和POST区别", path: "/guide/notes/browser/render04" }
     ],
   },
+  {
+    title: "Linux",
+    collapsable: true,
+    children: [
+      { title: "环境配置", path: "/guide/notes/linux/ssh" }
+    ],
+  },
 ];
 
