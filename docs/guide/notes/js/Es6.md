@@ -10,7 +10,7 @@
 3. 不允许重复声明const声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。 其只保证指针不发生改变，因此可以修改保存的对象的值
 
 ### 箭头函数
-> 引用 MDN 箭头函数
+> 引用 MDN
 
 箭头函数表达式的语法比函数表达式更短，并且不绑定自己的 this，arguments，super或 new.target。
 这些函数表达式最适合用于非方法函数(non-method functions)，并且它们不能用作构造函
@@ -72,6 +72,41 @@ console.log('ES6', studentES6.getName());
 ### 类和继承
 
 ### 展开运算符
+> 引用 MDN
+
+展开语法(Spread syntax), 可以在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；还可以在构造字面量对象时, 将对象表达式按key-value的方式展开。(译者注: 字面量一般指 [1, 2, 3] 或者 {name: "mdn"} 这种简洁的构造方式)
+
+
+1. 展开函数 参数
+```javascript
+let arr = [1, 2, 3]
+function fn (a, b, c) {
+    console.log(a, b ,c) // 1 2 3
+}
+fn(...arr) // 等价于 fn(1, 2, 3)
+```
+
+2. 展开数组
+```javascript
+const arr = [1, 2, 3];
+const arr2 = [...arr, 6, 5];
+console.log(arr2);  // [ 1, 2, 3, 6, 5 ]
+```
+
+3. 展开对象
+```javascript
+const obj = {
+    name: "Jack",
+    age: 18
+};
+
+const obj2 = {
+    ...obj,
+    gender: '男',
+    age: 19
+};
+console.log(obj2);  // {name: "Jack", age: 19, gender: '男'}
+```
 
 ### 解构赋值
 > es6允许按照一定的模式,从数组和对象中提取值,对变量进行赋值,这被称为解构(Destructuring)
