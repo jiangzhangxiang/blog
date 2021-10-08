@@ -15,8 +15,6 @@ ssh-keygen -t rsa -C  'your email@domain.com'
 生成过程中会提示输入密码两次，如果不想在使用公钥的时候输入密码，可以回车跳过；
 密钥默认保存位置在 `~/.ssh` 目录下，打开后会看到私钥文件 `id_rsa` 和公钥文件 `id_rsa.pub`
 
-![An image](../../imge/linux01.png)
-
 ## 复制公钥至服务器
 使用 scp 命令将本地的公钥文件 `id_rsa.pub` 复制到需要连接的Linux服务器：
 

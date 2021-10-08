@@ -33,6 +33,7 @@ module.exports = [
       { title: "call apply bind", path: "/guide/notes/js/call_apply_bind" },
       { title: "闭包的理解", path: "/guide/notes/js/closure" },
       { title: "js中的new做了什么", path: "/guide/notes/js/new" },
+      { title: "es6", path: "/guide/notes/js/Es6.md" },
     ],
   },
   {
