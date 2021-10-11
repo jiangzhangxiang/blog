@@ -45,6 +45,26 @@ function printText(text = 'default') {
 printText('hello'); // hello
 printText(); // default
 ```
+## Generator
+> 引用 MDN：生成器对象是由一个 generator function 返回的,并且它符合可迭代协议和迭代器协议。
+
+```javascript
+function* idMaker(){
+    let index = 0;
+    while(true)
+        yield index++;
+}
+
+let gen = idMaker(); // "Generator { }"
+
+console.log(gen.next().value);
+// 0
+console.log(gen.next().value);
+// 1
+console.log(gen.next().value);
+// 2
+// ...
+```
 
 ## Promise
 
