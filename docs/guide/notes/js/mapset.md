@@ -8,7 +8,7 @@
 * 一个Object 的键只能是字符串或者 Symbols，但一个Map 的键可以是任意值。
 * Map中的键值是有序的（FIFO 原则），而添加到Object中的键则不是。
 #### 和WeakMap之间的区别？
-WeakMap只能以复杂数据类型作为key，并且key值是弱引用，对于垃圾回收更加友好。
+WeakMap只能以复杂数据类型（对象）作为key，并且key值是弱引用，对于垃圾回收更加友好。
 新建实例:
 ```javascript
 // Object
@@ -28,6 +28,9 @@ var map = new Map([[1, 2], [2, 3]]); // map = {1 => 2, 2 => 3}
 * 不能通过迭代器来改变set的值，因为set的值就是键
 #### 和Array的区别
 * Array元素可重复，Set不允许重复
+
+#### 和WeakSet之间的区别？
+WeakSet 的成员只能是复杂数据类型（对象），而不能是其他类型的值。WeakSet中的成员都是弱引用，对于垃圾回收更加友好。
 新建实例:
 ```javascript
 // Array
