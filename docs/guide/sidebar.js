@@ -53,5 +53,12 @@ module.exports = [
       { title: "环境配置", path: "/guide/notes/linux/ssh" }
     ],
   },
+  {
+    title: "Vue3",
+    collapsable: true,
+    children: [
+      { title: "学习笔记", path: "/guide/notes/vue3/01" }
+    ],
+  },
 ];
 
