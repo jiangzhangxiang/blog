@@ -16,7 +16,7 @@ HTTPS 协议（HyperText Transfer Protocol over Secure Socket Layer）：一般�
 
 
 ## 浏览器在使用HTTPS传输数据的流程是什么？
-
+![An image](../../imge/ssl.png)
 1. 首先客户端通过URL访问服务器建立SSL连接。
 2. 服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端。
 3. 客户端的服务器开始协商SSL连接的安全等级，也就是信息加密的等级。
