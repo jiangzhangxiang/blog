@@ -2,9 +2,10 @@
 
 module.exports = [
   {
-    title: "介绍",
+    title: "前端概念",
+    collapsable: true,
     children: [
-      { title: "介绍", path: "/guide/" }
+      { title: "路由模式", path: "/guide/notes/web/router.md" },
     ],
   },
   {
