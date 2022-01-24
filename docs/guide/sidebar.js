@@ -38,7 +38,7 @@ module.exports = [
       { title: "闭包的理解", path: "/guide/notes/js/closure" },
       { title: "js中的new做了什么", path: "/guide/notes/js/new" },
       { title: "es6", path: "/guide/notes/js/Es6.md" },
-      { title: "数组迭代", path: "/guide/notes/js/iterator.md" },
+      { title: "数组迭代", path: "/guide/notes/js/Iterator.md" },
     ],
   },
   {
