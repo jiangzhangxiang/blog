@@ -19,6 +19,9 @@ module.exports = [
     title: "CSS",
     collapsable: true,
     children: [
+      { title: "BFC", path: "/guide/notes/css/BFC" },
+      { title: "盒子模型", path: "/guide/notes/css/boxSizing" },
+      { title: "居中", path: "/guide/notes/css/center" },
       { title: "Flex布局", path: "/guide/notes/css/flex" }
     ],
   },
