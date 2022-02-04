@@ -24,5 +24,3 @@ This will automatically open http://localhost:8080
 # build for test environment
 $ yarn run build
 ```
-
-
