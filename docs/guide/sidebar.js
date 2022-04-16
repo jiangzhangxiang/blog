@@ -65,5 +65,12 @@ module.exports = [
       { title: "学习笔记", path: "/guide/notes/vue3/01" }
     ],
   },
+  {
+    title: "Git",
+    collapsable: true,
+    children: [
+      { title: "账号设置", path: "/guide/notes/git/01" }
+    ],
+  },
 ];
 
