@@ -71,7 +71,8 @@ module.exports = [
     collapsable: true,
     children: [
       { title: "Git账号设置", path: "/guide/notes/Engineering/git" },
-      { title: "CICD", path: "/guide/notes/Engineering/CICD" }
+      { title: "CICD", path: "/guide/notes/Engineering/CICD" },
+      { title: "webpack", path: "/guide/notes/Engineering/webpack" }
     ],
   },
 ];
