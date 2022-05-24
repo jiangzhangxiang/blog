@@ -70,8 +70,8 @@ module.exports = [
     title: "工程化",
     collapsable: true,
     children: [
-      { title: "Git账号设置", path: "/guide/Engineering/git" },
-      { title: "CICD", path: "/guide/Engineering/CICD" }
+      { title: "Git账号设置", path: "/guide/notes/Engineering/git" },
+      { title: "CICD", path: "/guide/notes/Engineering/CICD" }
     ],
   },
 ];
