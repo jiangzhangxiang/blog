@@ -67,10 +67,11 @@ module.exports = [
     ],
   },
   {
-    title: "Git",
+    title: "工程化",
     collapsable: true,
     children: [
-      { title: "账号设置", path: "/guide/notes/git/01" }
+      { title: "Git账号设置", path: "/guide/Engineering/git" },
+      { title: "CICD", path: "/guide/Engineering/CICD" }
     ],
   },
 ];
