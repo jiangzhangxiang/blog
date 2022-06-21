@@ -40,6 +40,7 @@ module.exports = [
       { title: "es6", path: "/guide/notes/js/Es6.md" },
       { title: "数组迭代", path: "/guide/notes/js/Iterator.md" },
       { title: "数组、字符串的截取", path: "/guide/notes/js/array.md" },
+      { title: "commonJS和ES6模块化的区别", path: "/guide/notes/js/modul.md" },
     ],
   },
   {
