@@ -2,10 +2,11 @@
 
 module.exports = [
   {
-    title: "前端概念",
+    title: "前端综合",
     collapsable: true,
     children: [
       { title: "路由模式", path: "/guide/notes/web/router.md" },
+      { title: "大文件上传", path: "/guide/notes/web/bigFile.md" },
     ],
   },
   {
