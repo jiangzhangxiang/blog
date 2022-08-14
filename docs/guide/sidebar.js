@@ -73,5 +73,12 @@ module.exports = [
       { title: "账号设置", path: "/guide/notes/git/01" }
     ],
   },
+  {
+    title: "Java",
+    collapsable: true,
+    children: [
+      { title: "Java学习资料", path: "/guide/notes/service/java" }
+    ],
+  },
 ];
 
