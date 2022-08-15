@@ -1,6 +1,14 @@
 module.exports = [
     {
-        text: '博客笔记',
-        link: '/guide/'
+        text: '前端',
+        link: '/frontend/'
+    },
+    {
+        text: '后端',
+        link: '/afterend/'
+    },
+    {
+        text: 'web综合',
+        link: '/web/'
     }
 ]
