@@ -1,3 +1,4 @@
 module.exports = {
-	'/guide/': require('../guide/sidebar'),
+	'/frontend/': require('../frontend/sidebar.js'),
+	'/afterend/': require('../afterend/sidebar.js'),
 }

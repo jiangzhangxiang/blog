@@ -2,7 +2,7 @@
 home: true
 actionText: 博客笔记 →
 heroText: 蒋张祥的博客
-actionLink: /guide/
+actionLink: /frontend/
 features:
 - title: 简洁至上
   details: 使用最简单清晰的话语编写博客。
