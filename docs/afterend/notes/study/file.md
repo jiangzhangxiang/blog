@@ -1,6 +1,6 @@
 1. Java 编程基础（45 天）
 
-    ⭐⭐⭐ 韩顺平 - 零基础 30 天学会 Java：https://www.bilibili.com/video/BV1fh411y7R8（900 多集，顺序安排很合理，每个知识真正的打碎了，通俗、有示例、有实战、有思想）
+⭐⭐⭐ 韩顺平 - 零基础 30 天学会 Java：https://www.bilibili.com/video/BV1fh411y7R8（900 多集，顺序安排很合理，每个知识真正的打碎了，通俗、有示例、有实战、有思想）
 
 2. Java 8（3 天）
 
