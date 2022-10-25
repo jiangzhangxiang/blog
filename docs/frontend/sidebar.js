@@ -63,13 +63,5 @@ module.exports = [
       { title: "学习笔记", path: "/frontend/notes/vue3/01" }
     ],
   },
-  {
-    title: "工程化",
-    children: [
-      { title: "Git账号设置", path: "/frontend/notes/Engineering/git" },
-      { title: "CICD", path: "/frontend/notes/Engineering/CICD" },
-      { title: "webpack", path: "/frontend/notes/Engineering/webpack" }
-    ],
-  },
 ];
 
