@@ -51,13 +51,6 @@ module.exports = [
     ],
   },
   {
-    title: "Linux",
-    
-    children: [
-      { title: "环境配置", path: "/frontend/notes/linux/ssh" }
-    ],
-  },
-  {
     title: "Vue3",
     children: [
       { title: "学习笔记", path: "/frontend/notes/vue3/01" }

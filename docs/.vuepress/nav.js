@@ -8,7 +8,7 @@ module.exports = [
         link: '/afterend/'
     },
     {
-        text: 'web综合',
-        link: '/web/'
+        text: '其他',
+        link: '/other/'
     }
 ]
