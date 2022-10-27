@@ -1,5 +1,3 @@
-// const { title } = require("../.vuepress/config");
-
 module.exports = [
   {
     title: "前端综合",
@@ -47,7 +45,12 @@ module.exports = [
       { title: "从输入URL到页面呈现发生了什么", path: "/frontend/notes/browser/render01" },
       { title: "浏览器缓存", path: "/frontend/notes/browser/render02" },
       { title: "Http和Https区别", path: "/frontend/notes/browser/render03" },
-      { title: "GET和POST区别", path: "/frontend/notes/browser/render04" }
+      { title: "GET和POST区别", path: "/frontend/notes/browser/render04" },
+      { title: "浏览器安全", path: "" },
+      { title: "进程与线程", path: "" },
+      { title: "浏览器组成", path: "" },
+      { title: "浏览器渲染原理", path: "" },
+      { title: "浏览器本地存储", path: ""}
     ],
   },
   {
@@ -57,4 +60,3 @@ module.exports = [
     ],
   },
 ];
-
