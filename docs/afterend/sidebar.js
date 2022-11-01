@@ -1,5 +1,3 @@
-// const { title } = require("../.vuepress/config");
-
 module.exports = [
   {
     title: "java",
@@ -8,4 +6,3 @@ module.exports = [
     ],
   },
 ];
-

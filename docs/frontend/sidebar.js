@@ -1,5 +1,3 @@
-// const { title } = require("../.vuepress/config");
-
 module.exports = [
   {
     title: "前端综合",
@@ -47,14 +45,12 @@ module.exports = [
       { title: "从输入URL到页面呈现发生了什么", path: "/frontend/notes/browser/render01" },
       { title: "浏览器缓存", path: "/frontend/notes/browser/render02" },
       { title: "Http和Https区别", path: "/frontend/notes/browser/render03" },
-      { title: "GET和POST区别", path: "/frontend/notes/browser/render04" }
-    ],
-  },
-  {
-    title: "Linux",
-    
-    children: [
-      { title: "环境配置", path: "/frontend/notes/linux/ssh" }
+      { title: "GET和POST区别", path: "/frontend/notes/browser/render04" },
+      { title: "浏览器安全", path: "" },
+      { title: "进程与线程", path: "" },
+      { title: "浏览器组成", path: "" },
+      { title: "浏览器渲染原理", path: "" },
+      { title: "浏览器本地存储", path: ""}
     ],
   },
   {
@@ -63,13 +59,4 @@ module.exports = [
       { title: "学习笔记", path: "/frontend/notes/vue3/01" }
     ],
   },
-  {
-    title: "工程化",
-    children: [
-      { title: "Git账号设置", path: "/frontend/notes/Engineering/git" },
-      { title: "CICD", path: "/frontend/notes/Engineering/CICD" },
-      { title: "webpack", path: "/frontend/notes/Engineering/webpack" }
-    ],
-  },
 ];
-
