@@ -23,7 +23,6 @@ module.exports = [
   },
   {
     title: "JavaScript",
-    
     children: [
       { title: "数据类型", path: "/frontend/notes/js/dataType" },
       { title: "Map和Set", path: "/frontend/notes/js/mapset" },
@@ -37,6 +36,10 @@ module.exports = [
       { title: "数组迭代", path: "/frontend/notes/js/Iterator.md" },
       { title: "数组、字符串的截取", path: "/frontend/notes/js/array.md" },
       { title: "commonJS和ES6模块化的区别", path: "/frontend/notes/js/modul.md" },
+      { title: "Promise", path: "" },
+      { title: "async await", path: "" },
+      { title: "eventLoop", path: "" },
+      { title: "微任务和宏任务", path: "" }
     ],
   },
   {
@@ -54,9 +57,31 @@ module.exports = [
     ],
   },
   {
+    title: "React",
+    children: [],
+  },
+  {
     title: "Vue3",
     children: [
       { title: "学习笔记", path: "/frontend/notes/vue3/01" }
+    ],
+  },
+  {
+    title: "Webpack",
+    children: [],
+  },
+  {
+    title: "工程化",
+    children: [
+      { title: "Git账号设置", path: "/frontend/notes/Engineering/git" },
+      { title: "CICD", path: "/frontend/notes/Engineering/CICD" },
+      { title: "webpack", path: "/frontend/notes/Engineering/webpack" }
+    ],
+  },
+  {
+    title: "Linux",
+    children: [
+      { title: "环境配置", path: "/frontend/notes/linux/ssh" }
     ],
   },
 ];
