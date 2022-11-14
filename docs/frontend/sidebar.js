@@ -32,7 +32,8 @@ module.exports = [
       { title: "Promise", path: "" },
       { title: "async await", path: "" },
       { title: "eventLoop", path: "" },
-      { title: "微任务和宏任务", path: "" }
+      { title: "微任务和宏任务", path: "" },
+      { title: "Generator", path: "" }
     ],
   },
   {
