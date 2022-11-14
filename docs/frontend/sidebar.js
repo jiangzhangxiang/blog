@@ -1,12 +1,5 @@
 module.exports = [
   {
-    title: "前端综合",
-    children: [
-      { title: "路由模式", path: "/frontend/notes/comprehensive/router.md" },
-      { title: "大文件上传", path: "/frontend/notes/comprehensive/bigFile.md" },
-    ],
-  },
-  {
     title: "HTML5",
     children: [
       { title: "语义化", path: "/frontend/notes/html/semantic" }
@@ -53,7 +46,7 @@ module.exports = [
       { title: "进程与线程", path: "" },
       { title: "浏览器组成", path: "" },
       { title: "浏览器渲染原理", path: "" },
-      { title: "浏览器本地存储", path: ""}
+      { title: "浏览器本地存储", path: "" }
     ],
   },
   {
@@ -68,20 +61,33 @@ module.exports = [
   },
   {
     title: "Webpack",
-    children: [],
+    children: [
+      { title: "webpack", path: "/frontend/notes/webpack/webpack" }
+    ],
+  },
+  {
+    title: "Git",
+    children: [
+      { title: "Git账号设置", path: "/frontend/notes/git/01" },
+    ],
   },
   {
     title: "工程化",
     children: [
-      { title: "Git账号设置", path: "/frontend/notes/Engineering/git" },
       { title: "CICD", path: "/frontend/notes/Engineering/CICD" },
-      { title: "webpack", path: "/frontend/notes/Engineering/webpack" }
     ],
   },
   {
     title: "Linux",
     children: [
       { title: "环境配置", path: "/frontend/notes/linux/ssh" }
+    ],
+  },
+  {
+    title: "前端其他",
+    children: [
+      { title: "路由模式", path: "/frontend/notes/comprehensive/router.md" },
+      { title: "大文件上传", path: "/frontend/notes/comprehensive/bigFile.md" },
     ],
   },
 ];

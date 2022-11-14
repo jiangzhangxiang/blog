@@ -1,4 +1,4 @@
-## 多个git 邮箱设置
+### 多个git 邮箱设置
 
 #### 在IDEA中提交代码到github中，没有新增贡献值。该问题是因为本地git工具中的name和email和github中的不对应。
 
