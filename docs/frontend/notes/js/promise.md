@@ -96,7 +96,7 @@ class MyPromise {
           try {
             let x = onRejected(this.reason)
             resolvePromise(promise2, x, resolve, reject)
-          } finally {
+          } catch {
             reject(e)
           }
         })
