@@ -104,5 +104,8 @@ class MyPromise {
     })
     return promise2
   }
+  catch (errorCallback) {
+    return this.then(null, errorCallback)
+  }
 }
 ```
