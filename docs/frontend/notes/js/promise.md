@@ -4,6 +4,34 @@
 ```javascript
 const Pending = 'Pending', Fulfilled = 'Fulfilled', Rejected = 'Rejected'
 
+function resolvePromise(promise2, x, resolve, reject) {
+  if (promise2 === x) {
+    return reject(new TypeError('TypeError'))
+  }
+  let called = false
+  if ((typeof x === 'object' && x !== null) || (typeof x === 'function')) {
+    try {
+      let then = x.then
+      if (typeof then === "function") {
+        then.call(x, (y) => {
+          if (called) return;
+          called = true
+          resolvePromise(promise2, y, resolve, reject)
+        }, (r) => {
+          if (called) return;
+          called = true
+          reject(r)
+        })
+      }
+    } catch (e) {
+      if (called) return;
+      called = true
+      reject(e)
+    }
+  } else {
+    resolve(x)
+  }
+}
 class MyPromise {
   constructor (executor) {
     this.status = Pending;
@@ -32,16 +60,49 @@ class MyPromise {
     }
   }
   then (onFulfilled, onRejected) {
-    if (this.status === Fulfilled) {
-      onFulfilled(this.value)
-    }
-    if (this.status === Rejected) {
-      onRejected(this.reason)
-    }
-    if (this.status === Pending) {
-      this.onFulfilledCallBack.push(() => {onFulfilled(this.value)})
-      this.onRejectedCallBack.push(() => {onRejected(this.reason)})
-    }
+    onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
+    onRejected = typeof onRejected === 'function'? onRejected : reason => {throw reason}
+    let promise2 = new MyPromise((resolve, reject) => {
+      if (this.status === Fulfilled) {
+        setTimeout(()=> {
+          try {
+            let x = onFulfilled(this.value)
+            resolvePromise(promise2, x, resolve, reject)
+          } catch (e) {
+            reject(e)
+          }
+        }, 0)
+      }
+      if (this.status === Rejected) {
+        setTimeout(()=> {
+          try {
+            let x = onRejected(this.reason)
+            resolvePromise(promise2, x, resolve, reject)
+          } catch (e) {
+            reject(e)
+          }
+        }, 0)
+      }
+      if (this.status === Pending) {
+        this.onFulfilledCallBack.push(() => {
+          try {
+            let x = onFulfilled(this.value)
+            resolvePromise(promise2, x, resolve, reject)
+          } catch (e) {
+            reject(e)
+          }
+        })
+        this.onRejectedCallBack.push(() => {
+          try {
+            let x = onRejected(this.reason)
+            resolvePromise(promise2, x, resolve, reject)
+          } finally {
+            reject(e)
+          }
+        })
+      }
+    })
+    return promise2
   }
 }
 ```
