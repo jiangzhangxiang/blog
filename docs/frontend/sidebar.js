@@ -29,7 +29,7 @@ module.exports = [
       { title: "数组迭代", path: "/frontend/notes/js/Iterator.md" },
       { title: "数组、字符串的截取", path: "/frontend/notes/js/array.md" },
       { title: "commonJS和ES6模块化的区别", path: "/frontend/notes/js/modul.md" },
-      { title: "Promise", path: "" },
+      { title: "Promise", path: "/frontend/notes/js/promise.md" },
       { title: "async await", path: "" },
       { title: "eventLoop", path: "" },
       { title: "微任务和宏任务", path: "" },
