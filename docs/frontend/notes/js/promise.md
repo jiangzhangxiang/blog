@@ -12,6 +12,7 @@ function resolvePromise(promise2, x, resolve, reject) {
   if ((typeof x === 'object' && x !== null) || (typeof x === 'function')) {
     try {
       let then = x.then
+      console.log(0, then);
       if (typeof then === "function") {
         then.call(x, (y) => {
           if (called) return;
@@ -29,6 +30,7 @@ function resolvePromise(promise2, x, resolve, reject) {
       reject(e)
     }
   } else {
+    console.log(1, x);
     resolve(x)
   }
 }
@@ -61,7 +63,7 @@ class MyPromise {
   }
   then (onFulfilled, onRejected) {
     onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
-    onRejected = typeof onRejected === 'function'? onRejected : reason => {throw reason}
+    onRejected = typeof onRejected === 'function'? onRejected : reason => reason
     let promise2 = new MyPromise((resolve, reject) => {
       if (this.status === Fulfilled) {
         setTimeout(()=> {
@@ -96,7 +98,7 @@ class MyPromise {
           try {
             let x = onRejected(this.reason)
             resolvePromise(promise2, x, resolve, reject)
-          } catch {
+          } catch (e) {
             reject(e)
           }
         })
