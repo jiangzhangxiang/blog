@@ -2,8 +2,6 @@
 
 1. 初始版本-无法支持链式调用
 ```javascript
-const Pending = 'Pending', Fulfilled = 'Fulfilled', Rejected = 'Rejected'
-
 function resolvePromise(promise2, x, resolve, reject) {
   if (promise2 === x) {
     return reject(new TypeError('Chaining cycle detected for promise'))
@@ -64,7 +62,7 @@ class MyPromise {
     onRejected = typeof onRejected === 'function'? onRejected : reason => {throw reason}
     let promise2 = new MyPromise((resolve, reject) => {
       if (this.status === Fulfilled) {
-        setTimeout(()=> {
+        setTimeout(() => {
           try {
             let x = onFulfilled(this.value)
             resolvePromise(promise2, x, resolve, reject)
@@ -74,7 +72,7 @@ class MyPromise {
         }, 0)
       }
       if (this.status === Rejected) {
-        setTimeout(()=> {
+        setTimeout(() => {
           try {
             let x = onRejected(this.reason)
             resolvePromise(promise2, x, resolve, reject)
