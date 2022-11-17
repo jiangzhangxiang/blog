@@ -1,13 +1,5 @@
-### async函数是generator函数的语法糖
----
-title: 011 解释一下async/await的运行机制。
-date: 2019-12-24
-categories: 
- - JavaScript
-tags:
- - JS异步
-sidebar: 'auto'
----
+### 解释一下async/await的运行机制
+
 `async/await`被称为 JS 中**异步终极解决方案**。它既能够像 co + Generator 一样用同步的方式来书写异步代码，又得到底层的语法支持，无需借助任何第三方库。接下来，我们从原理的角度来重新审视这个语法糖背后究竟做了些什么。
 
 ## async
