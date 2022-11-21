@@ -9,10 +9,12 @@ function taskQueue(fetchList, max = 6, allCallback = () => {}) {
   const taskFinally = ({value, callback}) => {
     callback(value)
     const len = results.push(value);
+    // 任务未完成
     if (len < fetchCount && i + 1 < fetchCount) {
       requestsQueue.shift();
       taskRequest(fetchList[++i])
     } else if (len === fetchCount) {
+    // 任务全部完成
       'function' === typeof allCallback && allCallback(results)
     }
   }
@@ -23,6 +25,7 @@ function taskQueue(fetchList, max = 6, allCallback = () => {}) {
       }).catch((reason) => {
         taskFinally({value: reason, callback: task.callback})
       })
+      // 执行剩余任务
       if (requestsQueue.push(req) < max) {
         taskRequest(fetchList[++i])
       }
