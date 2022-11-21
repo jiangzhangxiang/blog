@@ -1,7 +1,10 @@
 ### 手写一个promise 
 
-1. 初始版本-无法支持链式调用
+1. promise A+
 ```javascript
+const Pending = 'Pending', Fulfilled = 'Fulfilled', Rejected = 'Rejected'
+
+// 对 then 函数的返回值的处理
 function resolvePromise(promise2, x, resolve, reject) {
   if (promise2 === x) {
     return reject(new TypeError('Chaining cycle detected for promise'))
@@ -14,6 +17,7 @@ function resolvePromise(promise2, x, resolve, reject) {
         then.call(x, (y) => {
           if (called) return;
           called = true
+          // 如果返回了一个 新的 promise 就递归 resolvePromise
           resolvePromise(promise2, y, resolve, reject)
         }, (r) => {
           if (called) return;
@@ -27,6 +31,7 @@ function resolvePromise(promise2, x, resolve, reject) {
       reject(e)
     }
   } else {
+    // 其他值 直接走resolve
     resolve(x)
   }
 }
@@ -58,11 +63,14 @@ class MyPromise {
     }
   }
   then (onFulfilled, onRejected) {
+    // 如果没有传入onFulfilled，onFulfilled 就使用默认函数
     onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
     onRejected = typeof onRejected === 'function'? onRejected : reason => {throw reason}
+    // 返回一个 新的promise 支持链式调用
     let promise2 = new MyPromise((resolve, reject) => {
       if (this.status === Fulfilled) {
-        setTimeout(() => {
+        // setTimeout 模拟异步任务
+        setTimeout(()=> {
           try {
             let x = onFulfilled(this.value)
             resolvePromise(promise2, x, resolve, reject)
