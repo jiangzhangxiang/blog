@@ -26,14 +26,15 @@ module.exports = [
       { title: "闭包的理解", path: "/frontend/notes/js/closure" },
       { title: "js中的new做了什么", path: "/frontend/notes/js/new" },
       { title: "es6", path: "/frontend/notes/js/Es6.md" },
-      { title: "数组迭代", path: "/frontend/notes/js/Iterator.md" },
+      { title: "数组迭代", path: "/frontend/notes/js/arrayIterator.md" },
       { title: "数组、字符串的截取", path: "/frontend/notes/js/array.md" },
       { title: "commonJS和ES6模块化的区别", path: "/frontend/notes/js/modul.md" },
       { title: "Promise", path: "/frontend/notes/js/promise.md" },
       { title: "async await", path: "/frontend/notes/js/async_await.md" },
       { title: "eventLoop", path: "" },
       { title: "微任务和宏任务", path: "" },
-      { title: "Generator", path: "" }
+      { title: "Generator", path: "/frontend/notes/js/generator.md" },
+      { title: "Iterator", path: "/frontend/notes/js/iterator.md"}
     ],
   },
   {
