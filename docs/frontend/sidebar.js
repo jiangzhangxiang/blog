@@ -31,8 +31,8 @@ module.exports = [
       { title: "commonJS和ES6模块化的区别", path: "/frontend/notes/js/modul.md" },
       { title: "Promise", path: "/frontend/notes/js/promise.md" },
       { title: "async await", path: "/frontend/notes/js/async_await.md" },
+      { title: "微任务和宏任务", path: "/frontend/notes/js/microTasks_macroTasks.md" },
       { title: "eventLoop", path: "" },
-      { title: "微任务和宏任务", path: "" },
       { title: "Generator", path: "/frontend/notes/js/generator.md" },
       { title: "Iterator", path: "/frontend/notes/js/iterator.md"}
     ],
