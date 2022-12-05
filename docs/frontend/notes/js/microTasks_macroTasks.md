@@ -10,7 +10,8 @@
 | UI rendering/ UI事件 |
 | postMessage，MessageChannel |
 | I/O |
-| setTimeout/ setInterval / setImmediate |
+| setTimeout/ setInterval |
+| setImmediate（浏览器暂时不支持，只有IE10支持，具体可见MDN）|
 
 
 ### 微任务
@@ -25,3 +26,4 @@
 | MutationObserver| 
 | Promise.then(或.reject)| 
 | Object.observe（已废弃；Proxy 对象替代) |
+| Process.nextTick（Node独有）|

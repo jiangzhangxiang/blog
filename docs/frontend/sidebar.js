@@ -32,7 +32,7 @@ module.exports = [
       { title: "Promise", path: "/frontend/notes/js/promise.md" },
       { title: "async await", path: "/frontend/notes/js/async_await.md" },
       { title: "微任务和宏任务", path: "/frontend/notes/js/microTasks_macroTasks.md" },
-      { title: "eventLoop", path: "" },
+      { title: "eventLoop", path: "/frontend/notes/js/eventLoop.md" },
       { title: "Generator", path: "/frontend/notes/js/generator.md" },
       { title: "Iterator", path: "/frontend/notes/js/iterator.md"}
     ],
