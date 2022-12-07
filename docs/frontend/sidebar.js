@@ -27,6 +27,7 @@ module.exports = [
       { title: "js中的new做了什么", path: "/frontend/notes/js/new" },
       { title: "es6", path: "/frontend/notes/js/Es6.md" },
       { title: "数组迭代", path: "/frontend/notes/js/arrayIterator.md" },
+      { title: "for in 和 for of", path: "/frontend/notes/js/forin_forof.md" },
       { title: "数组、字符串的截取", path: "/frontend/notes/js/array.md" },
       { title: "commonJS和ES6模块化的区别", path: "/frontend/notes/js/modul.md" },
       { title: "Promise", path: "/frontend/notes/js/promise.md" },
