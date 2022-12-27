@@ -51,7 +51,7 @@ module.exports = [
     ],
   },
   {
-    title: "网络协议",
+    title: "HTTP 协议",
     children: [
       { title: "Http和Https区别", path: "/frontend/notes/http/render03" },
       { title: "GET和POST区别", path: "/frontend/notes/http/render04" },
