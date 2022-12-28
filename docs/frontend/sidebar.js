@@ -45,7 +45,6 @@ module.exports = [
       { title: "浏览器缓存", path: "/frontend/notes/browser/render02" },
       { title: "浏览器安全", path: "/frontend/notes/browser/render05" },
       { title: "进程与线程", path: "/frontend/notes/browser/render03" },
-      { title: "浏览器组成", path: "" },
       { title: "浏览器渲染原理", path: "" },
       { title: "浏览器本地存储", path: "" }
     ],
