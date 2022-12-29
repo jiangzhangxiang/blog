@@ -41,11 +41,12 @@ module.exports = [
   {
     title: "浏览器",
     children: [
-      { title: "从输入URL到页面呈现发生了什么", path: "/frontend/notes/browser/render01" },
+      { title: "从输入URL到页面呈现发生了什么--网络请求", path: "/frontend/notes/browser/render01" },
+      { title: "从输入URL到页面呈现发生了什么--解析算法", path: "/frontend/notes/browser/render04" },
+      { title: "从输入URL到页面呈现发生了什么--渲染过程篇", path: "/frontend/notes/browser/render06"},
       { title: "浏览器缓存", path: "/frontend/notes/browser/render02" },
       { title: "浏览器安全", path: "/frontend/notes/browser/render05" },
       { title: "进程与线程", path: "/frontend/notes/browser/render03" },
-      { title: "浏览器渲染原理", path: "/frontend/notes/browser/render04" },
       { title: "浏览器本地存储", path: "" }
     ],
   },
