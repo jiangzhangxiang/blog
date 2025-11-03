@@ -13,7 +13,6 @@ git init
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:jiangzhangxiang/blog.git master:gh-pages
-
 # 发布到阿里云
 #npm run build:aliyun
 #cd ..
